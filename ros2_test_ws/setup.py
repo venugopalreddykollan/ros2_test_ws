@@ -14,7 +14,11 @@ setup(
     install_requires=['setuptools'],
     zip_safe=True,
     maintainer='ros2',
+<<<<<<< HEAD
     maintainer_email='johndoe123@gmail.com',
+=======
+    maintainer_email='venugopal.reddy.kollan@gmail.com',
+>>>>>>> 8db777adc051027818bd47f9119b0335562b321e
     description='TODO: Package description',
     license='TODO: License declaration',
     tests_require=['pytest'],
