@@ -31,8 +31,8 @@ RUN bash -c "source /opt/ros/${ROS_DISTRO}/setup.bash && \
             source install/setup.bash"
 
 #Source the setup file
-RUN echo "source /opt/ros/${ROS_DISTRO}/setup.sh" >> /root/.bashrc && \
-    echo "source /ros2_test_ws/install/setup.sh" >> /root/.bashrc
+RUN echo "source /opt/ros/${ROS_DISTRO}/setup.bash" >> /root/.bashrc && \
+    echo "source /ros2_test_ws/install/setup.bash" >> /root/.bashrc
 
 #Copy the entrypoint script
 COPY entrypoint.sh /
