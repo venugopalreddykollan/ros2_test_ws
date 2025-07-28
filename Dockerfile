@@ -26,10 +26,9 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/*
 
 #Build the package
-RUN . /opt/ros/${ROS_DISTRO}/setup.sh && \
-    . install/setup.sh && \
-    colcon build --packages-select ros2_test_ws && \
-    . install/setup.sh
+RUN bash -c "source /opt/ros/${ROS_DISTRO}/setup.bash && \
+            colcon build --packages-select ros2_test_ws && \
+            source install/setup.bash"
 
 #Source the setup file
 RUN echo "source /opt/ros/${ROS_DISTRO}/setup.sh" >> /root/.bashrc && \
