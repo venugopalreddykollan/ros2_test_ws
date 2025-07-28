@@ -22,8 +22,7 @@ WORKDIR /ros2_test_ws
 #update ros dep and install dependencies
 RUN apt-get update && \
     rosdep update && \
-    ./opt/ros/${ROS_DISTRO}/setup.sh && \
-    rosdep install --from-paths src --ignore-src -r -y && \
+    bash -c "source /opt/ros/${ROS_DISTRO}/setup.bash && rosdep install --from-paths src --ignore-src -r -y" && \
     rm -rf /var/lib/apt/lists/*
 
 #Build the package
